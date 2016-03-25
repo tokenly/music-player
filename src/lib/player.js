@@ -1,6 +1,7 @@
 // var $ = require('jquery');
 var playlist = require('./playlist');
 var musicAPI = require('./musicAPI');
+var account = require('./account');
 
 var exports = {};
 
@@ -25,6 +26,8 @@ exports.run = function() {
                 showError(`Failed to load player: ${error}`);
             });
         })
+
+    bindEvents();
 };
 
 // ------------------------------------------------------------------------
@@ -53,10 +56,12 @@ let synchronizeSongs = (songsData)=> {
 
 let hideUI = ()=>{
     $('.sm2-bar-ui').hide();
+    $('.footer').hide();
 }
 let showUI = ()=>{
     return new Promise((resolve, reject) => {
         $('.sm2-bar-ui').fadeIn(FADE_SPEED, resolve);
+        $('.footer').fadeIn(FADE_SPEED);
     });
 }
 let showStatus = ()=>{
@@ -65,6 +70,14 @@ let showStatus = ()=>{
 let hideStatus = ()=>{
     return new Promise((resolve, reject) => {
         $('.status').fadeOut(FADE_SPEED, resolve);
+    });
+}
+
+let bindEvents = ()=>{
+    $('a[data-logout]').on('click', (e)=>{
+        e.preventDefault();
+        account.clearCredentials();
+        window.location.href = 'index.html';
     });
 }
 

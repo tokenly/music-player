@@ -40,7 +40,8 @@ exports.runLoginForm = () => {
             })
             .catch ( (error)=> {
                 console.log('musicAPI.login error', error);
-                $('#LoginForm .error').html(error).fadeIn('fast');
+                $('#LoginForm .error').html(error);
+                showError();
             })
             .then( (result)=> {
                 endProcessingForm();
@@ -54,13 +55,27 @@ exports.runLoginForm = () => {
 
 // ------------------------------------------------------------------------
 
+let hideError = () => {
+    // $('#LoginForm .error').fadeOut(FADE_SPEED);
+    if ($('#LoginForm .error').is(':visible')) {
+        $('#LoginForm .error').slideUp(FADE_SPEED);
+    }
+}
+let showError = () => {
+    // $('#LoginForm .error').fadeIn(FADE_SPEED);
+    $('#LoginForm .error').slideDown(FADE_SPEED);
+
+}
+
 let beginProcessingForm = () => {
-    $('#LoginForm .error').hide();
-    $('#LoginForm').fadeTo('fast', 0.15);
+    hideError();
+    // $('#LoginForm').fadeTo(FADE_SPEED, 0.15);
+    $('#LoginForm').css('opacity', 0.15);
 }
 
 let endProcessingForm = ()=>{
-    $('#LoginForm').fadeTo('fast', 1);
+    // $('#LoginForm').fadeTo(FADE_SPEED, 1);
+    $('#LoginForm').css('opacity', 1);
 }
 
 let showLogo = (speed)=>{

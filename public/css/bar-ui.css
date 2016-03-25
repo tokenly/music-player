@@ -1004,17 +1004,42 @@
 
 
 /* custom */
+body {
+  font-family: helvetica, arial, verdana, sans-serif;
+}
 div.error {
   color: #800;
   font-weight: bold;
-  font-family: helvetica, arial, verdana, sans-serif;
   font-size: 1.2rem;
   padding: 4px 8px;
 }
 div.status {
+  text-align: center;
   color: #ccc;
   font-weight: bold;
-  font-family: helvetica, arial, verdana, sans-serif;
-  font-size: 1.6rem;
-  padding: 4px 8px;
+  font-size: 1.8rem;
+  padding: 12px 8px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+div.footer {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: #8D9BA5;
+}
+div.footer a {
+  color: #729AB6;
+  text-decoration: underline;
+}
+div.music-title {
+  float: left;
+}
+div.music-title a {
+}
+
+div.login-status {
+  float: right;
+}
+div.login-status a {
 }

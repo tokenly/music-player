@@ -8,7 +8,8 @@
 <body>
     <div class="error" style="display: none;"></div>
     <div class="status" style="display: none;">Loading...</div>
-    <div class="sm2-bar-ui" style="display: none;">
+
+    <div class="sm2-bar-ui full-width" style="display: none;">
         <div class="bd sm2-main-controls">
             <div class="sm2-inline-texture"></div>
             <div class="sm2-inline-gradient"></div>
@@ -75,10 +76,20 @@
             </div>
         </div>
     </div>
+
+    <div class="footer" style="display:none;">
+        <div class="music-title" style="">Powered by <a href="https://tokenly.com" target="_blank">Tokenly Music</a></div>
+        <div class="login-status" style="">Logged in as <span class="username">foo</span>. <a href="#logout" data-logout>Logout</a></div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <script src="bundle.js" charset="utf-8"></script>
     <script src="bar-ui.js" charset="utf-8"></script>
     <script>TokenlyMusicPlayer.runPlayer();</script>
+
+    <noscript>
+        <p>JavaScript is required.</p>
+    </noscript>
 </body>
 
 </html>

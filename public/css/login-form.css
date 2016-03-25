@@ -9,11 +9,20 @@
   font-family: helvetica, arial, verdana, sans-serif;
   font-size: 2.2rem;
   font-weight: bold;
-  color: #2D3293;
+  color: #5B5C86;
   font-variant: small-caps;
   margin-top: -15px;
   margin-left: -24px;
 
+}
+
+#LoginForm .error {
+  display: block;
+  color: #863232;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 #LoginForm {
@@ -22,10 +31,63 @@
   font-family: helvetica, arial, verdana, sans-serif;
 }
 
+#LoginForm label {
+  color: #777;
+  font-size: 1.0rem;
+}
+
 #LoginForm input {
-    margin-right: 16px;
+
+  font-size: 1.0rem;
+  color: #777;
+  font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  margin: .25em 0;
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  vertical-align: middle;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  margin-right: 16px;
 }
 
 #LoginForm h3 {
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+#LoginForm .btn {
+  background: #2E3191;
+  background-image: -webkit-linear-gradient(top, #2E3191, #315DAC);
+  background-image: -moz-linear-gradient(top, #2E3191, #315DAC);
+  background-image: -ms-linear-gradient(top, #2E3191, #315DAC);
+  background-image: -o-linear-gradient(top, #2E3191, #315DAC);
+  background-image: linear-gradient(to bottom, #2E3191, #315DAC);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 9px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+}
+
+#LoginForm .btn:hover {
+  background: #315DAC;
+  background-image: -webkit-linear-gradient(top, #315DAC, #315DAC);
+  background-image: -moz-linear-gradient(top, #315DAC, #315DAC);
+  background-image: -ms-linear-gradient(top, #315DAC, #315DAC);
+  background-image: -o-linear-gradient(top, #315DAC, #315DAC);
+  background-image: linear-gradient(to bottom, #315DAC, #315DAC);
+  text-decoration: none;
 }

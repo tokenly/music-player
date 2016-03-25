@@ -13,12 +13,12 @@
     </div>
 
     <div id="LoginForm" style="display:none;">
-        <h3>Please login with your TokenPass username and password</h3>
-        <div class="error"></div>
+        <div class="error" style="display:none;"></div>
+        <h3>Please login with your TokenPass username and password.</h3>
         <form method="POST" action="index.html">
-            <label for="username">Username </label><input type="text" name="username"> 
-            <label for="password">Password </label><input type="password" name="password"> 
-            <button type="submit">Login</button>
+            <label for="username" style="display: none;">Username</label><input required type="text" name="username" placeholder="Username"> 
+            <label for="password" style="display: none;">Password</label><input required type="password" name="password" placeholder="Password"> 
+            <button type="submit" class="btn">Login</button>
         </form>
     </div>
 
