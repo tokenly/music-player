@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Tokenly Music Player</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/login-form.css">
+</head>
+
+<body>
+
+    <div class="logo" style="display:none;">
+        <img src="image/tokenly-transparent-logo.png" alt="Tokenly" height="80">
+        <!-- <div class="title">Music</div> -->
+    </div>
+
+    <div id="LoginForm" style="display:none;">
+        <h3>Please login with your TokenPass username and password</h3>
+        <div class="error"></div>
+        <form method="POST" action="index.html">
+            <label for="username">Username </label><input type="text" name="username"> 
+            <label for="password">Password </label><input type="password" name="password"> 
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+    <script src="bundle.js" charset="utf-8"></script>
+    <script>window.TokenlyMusicPlayer.runLogin()</script>
+</body>
+
+</html>

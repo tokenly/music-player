@@ -1,0 +1,31 @@
+﻿.logo {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.logo .title {
+  text-align: center;
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2D3293;
+  font-variant: small-caps;
+  margin-top: -15px;
+  margin-left: -24px;
+
+}
+
+#LoginForm {
+  text-align: center;
+  color: #1E1D29;
+  font-family: helvetica, arial, verdana, sans-serif;
+}
+
+#LoginForm input {
+    margin-right: 16px;
+}
+
+#LoginForm h3 {
+    margin-bottom: 30px;
+}
