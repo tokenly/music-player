@@ -35,7 +35,7 @@ exports.getAuthorizedSongs = () => {
 let send = (method, apiPathSuffix, params, opts)=> {
     return new Promise((resolve, reject) => {
         
-        url = URL_PREFIX+apiPathSuffix;
+        let url = URL_PREFIX+apiPathSuffix;
 
         let headers = signRequest(method, url, params, opts);
 
@@ -92,7 +92,7 @@ let signRequest = (method, url, params, opts)=> {
     parser.href = url;
     let strippedUrl = parser.protocol + '//' + parser.host + parser.pathname;
 
-    signature = signURLParameters(method, strippedUrl, paramsBody, nonce, credentials)
+    let signature = signURLParameters(method, strippedUrl, paramsBody, nonce, credentials)
 
     let headers = {
         'X-Tokenly-Auth-Nonce':     nonce,

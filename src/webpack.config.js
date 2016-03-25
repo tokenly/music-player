@@ -6,9 +6,25 @@ module.exports = {
     },
 
     module: {
+        // preLoaders: [
+        //   {
+        //     test: /\.js$/,
+        //     loader: 'eslint-loader',
+        //     include: __dirname + '/lib',
+        //     exclude: /bundle\.js$/
+        //   }
+        // ],
         loaders: [
             { test: /\.css$/, loader: "style!css" },
-            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+            { 
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                query: {
+                  // plugins: ['transform-strict-mode'],
+                  presets: ['es2015'],
+                }
+            }
         ]
     },
 

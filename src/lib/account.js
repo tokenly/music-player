@@ -3,7 +3,7 @@ var store = require('../node_modules/store');
 var exports = {};
 
 exports.isLoggedIn = () => {
-    credentials = exports.getCredentials();
+    let credentials = exports.getCredentials();
     if (credentials == null || credentials.apiToken == null) {
         return false;
     }
