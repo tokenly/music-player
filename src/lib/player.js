@@ -11,6 +11,8 @@ exports.run = function() {
     hideUI();
     showStatus('Loading...');
 
+    $('.login-status .username').text(account.getCredentials().username);
+
     musicAPI.getAuthorizedSongs()
         .then((songsData)=>{
             synchronizeSongs(songsData);
